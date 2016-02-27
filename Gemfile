@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 
-gem 'dotenv-rails', :require => 'dotenv/rails-now'
+gem 'dotenv-rails', :groups => [:development, :test]
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -23,6 +23,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+
+gem 'omniauth', '~> 1.3.1'
 
 
 # Use ActiveModel has_secure_password
