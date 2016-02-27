@@ -1,4 +1,4 @@
-# devmail
+# /dev/mail
 
 Original Idea: https://github.com/captn3m0/ideas#newsletters-for-github
 
