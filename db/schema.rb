@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20160227144215) do
     t.string   "email"
     t.integer  "userid",     limit: 8
     t.string   "nick"
+    t.string   "token"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
