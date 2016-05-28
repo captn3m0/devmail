@@ -1,3 +1,4 @@
+# Create Users
 class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
@@ -18,5 +19,5 @@ class CreateUsers < ActiveRecord::Migration
     # Make sure that userid is unique
     add_index :users, :userid, unique: true
     add_index :users, :email
-    end
+  end
 end
