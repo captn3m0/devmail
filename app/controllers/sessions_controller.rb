@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-
   def create
     # numeric id
     existing_user = User.where(userid: omnihash[:uid]).first
@@ -16,7 +15,6 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-
   end
 
   def failure
@@ -25,6 +23,7 @@ class SessionsController < ApplicationController
   end
 
   private
+
   def omnihash
     request.env['omniauth.auth']
   end

@@ -1,5 +1,5 @@
 class CreateUsers < ActiveRecord::Migration
-def change
+  def change
     create_table :users do |t|
       # User name, from github
       t.string :name
@@ -16,7 +16,7 @@ def change
     end
 
     # Make sure that userid is unique
-    add_index :users, :userid, :unique=> true
+    add_index :users, :userid, unique: true
     add_index :users, :email
-  end
+    end
 end
