@@ -16,4 +16,13 @@ class UserTest < ActiveSupport::TestCase
     assert_equal @omnihash[:uid].to_i, user.userid
     assert_equal @omnihash[:credentials][:token], user.token
   end
+
+  test 'login twice should create user once' do
+    user = User.create_from_omnihash @omnihash
+    assert user.is_a? User
+    assert_equal @omnihash[:uid].to_i, user.userid
+
+    user2 = User.create_from_omnihash @omnihash
+    assert_equal user, user2
+  end
 end
