@@ -8,4 +8,5 @@ en:
   notifications:
     account_created: 'Your account has been created and you have been logged in!'
     already_logged_in: 'You are already logged in.'
+    logged_in: 'You have been logged in successfully'
     authentication_error: 'There was an error at the remote authentication service!.'
