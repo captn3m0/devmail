@@ -21,6 +21,9 @@ gem "sprockets-es6"
 gem "suspenders"
 gem "title"
 gem "uglifier"
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'octokit'
 
 group :development do
   gem "listen"
