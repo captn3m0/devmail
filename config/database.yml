@@ -1,6 +1,7 @@
 development: &default
   adapter: postgresql
-  database: devmail_development
+  database: devmail
+  password: devmail
   encoding: utf8
   min_messages: warning
   pool: <%= Integer(ENV.fetch("DB_POOL", 5)) %>
