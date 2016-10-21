@@ -1,39 +1,47 @@
 <header class="centered-navigation" role="banner">
   <div class="centered-navigation-wrapper">
-    <a href="javascript:void(0)" class="mobile-logo">
-      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="Logo image">
+    <a class="mobile-logo">
+      <img src="/logo.png" alt="Logo image">
     </a>
-    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+    <a id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
     <nav role="navigation">
       <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-        <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
-        <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
-        <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
         <li class="nav-link logo">
-          <a href="javascript:void(0)" class="logo">
-            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="Logo image">
+          <a class="logo">
+            <img src="/logo.png" alt="Logo image">
           </a>
         </li>
-        <li class="nav-link"><a href="javascript:void(0)">Testimonials</a></li>
-        <li id="js-centered-more" class="nav-link more"><a href="javascript:void(0)">More</a>
+        <li class="nav-link">/dev/mail</li>
+        <li class="nav-link"><a>About Us</a></li>
+        <li class="nav-link"><a>Contact</a></li>
+        <!-- <li id="js-centered-more" class="nav-link more"><a>More</a>
           <ul class="submenu">
-            <li><a href="javascript:void(0)">Submenu Item</a></li>
-            <li><a href="javascript:void(0)">Another Item</a></li>
-            <li class="more"><a href="javascript:void(0)">Item with submenu</a>
+            <li><a>Submenu Item</a></li>
+            <li><a>Another Item</a></li>
+            <li class="more"><a>Item with submenu</a>
               <ul class="submenu fly-out-right">
-                <li><a href="javascript:void(0)">Sub-submenu Item</a></li>
-                <li><a href="javascript:void(0)">Another Item</a></li>
+                <li><a>Sub-submenu Item</a></li>
+                <li><a>Another Item</a></li>
               </ul>
             </li>
-            <li class="more"><a href="javascript:void(0)">Another submenu</a>
+            <li class="more"><a>Another submenu</a>
               <ul class="submenu fly-out-right">
-                <li><a href="javascript:void(0)">Sub-submenu</a></li>
-                <li><a href="javascript:void(0)">An Item</a></li>
+                <li><a>Sub-submenu</a></li>
+                <li><a>An Item</a></li>
               </ul>
             </li>
           </ul>
-        </li>
-        <li class="nav-link"><a href="javascript:void(0)">Sign up</a></li>
+        </li> -->
+        <% if user_signed_in? %>
+          <li class="nav-link">
+            <%= current_user['nick'] %>
+          </li>
+        <% else %>
+          <li class="nav-link">
+            <%= link_to 'Sign in', signin_path(:github) %>
+          </li>
+        <% end %>
+
       </ul>
     </nav>
   </div>
