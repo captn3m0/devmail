@@ -6,9 +6,11 @@ class SessionsController < ApplicationController
       flash[:notice] = I18n.t('notifications.provider_already_connected', provider: omnihash[:provider])
     elsif existing_user
       session[:user] = existing_user
+      session[:user_id] = existing_user.id
       flash[:notice] = I18n.t('notifications.logged_in')
     else
       session[:user] = User.create_from_omnihash(omnihash)
+      session[:user_id] = session[:user].id
       flash[:notice] = I18n.t('notifications.account_created')
     end
     redirect_to '/home'

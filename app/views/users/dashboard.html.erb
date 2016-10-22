@@ -1,1 +1,5 @@
+<% if @stars.size > 0 %>
 <%= render "refills/tables_minimal" %>
+<% else %>
+<%= render 'refills/hero' %>
+<% end %>
