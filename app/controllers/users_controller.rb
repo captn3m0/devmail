@@ -1,6 +1,8 @@
 # Users Controller
 class UsersController < ApplicationController
   def dashboard
-    return render json: current_user if logged_in?
+    if logged_in?
+      @stars = current_user.stars
+    end
   end
 end

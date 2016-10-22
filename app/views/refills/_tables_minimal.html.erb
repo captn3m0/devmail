@@ -1,0 +1,44 @@
+<div class="e1">
+</div>
+<table class="table-minimal">
+  <thead>
+    <tr>
+      <th>repo</th>
+      <th>Events</th>
+      <th>Frequency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Repo Name</td>
+      <td>
+        <label>
+          <input type="checkbox" class="checkbox" name="release" value="release">
+          Releases
+        </label>
+        <label>
+          <input type="checkbox" class="checkbox" name="tag" value="tag">
+          Tags
+        </label>
+        <label>
+          <input type="checkbox" class="checkbox" name="merge" value="merge">
+          Merges
+        </label>
+      </td>
+      <td>
+        <div class="dropdown">
+          <div class="dropdown-container">
+            <p class="dropdown-description">Frequency</p>
+            <p class="dropdown-button">Click to Select</p>
+            <ul class="dropdown-menu dropdown-select">
+              <li>Immediate</li>
+              <li>Daily Digest</li>
+              <li>Weekly Digest</li>
+            </ul>
+          </div>
+        </div>
+      </td>
+      <td><button>Save</button></td>
+    </tr>
+  </tbody>
+</table>
