@@ -9,8 +9,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Repo Name</td>
+    <% @stars.each do |star| %>
+    <tr data-repoid="<%= star.repo_id%>">
+      <td><%= star.repo %></td>
       <td>
         <label>
           <input type="checkbox" class="checkbox" name="release" value="release">
@@ -40,5 +41,6 @@
       </td>
       <td><button>Save</button></td>
     </tr>
+    <% end %>
   </tbody>
 </table>

@@ -7,4 +7,10 @@ class UsersController < ApplicationController
       # byebug
     end
   end
+
+  def refresh_stars
+    if logged_in?
+      FetchStarsJob.perform_later current_user
+    end
+  end
 end

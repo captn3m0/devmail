@@ -3,3 +3,9 @@ section {
   header { @include span-columns(5); }
   section { @include span-columns(12); }
 }
+.begin {
+  margin-top: 5em;
+  margin-bottom: 5em;
+  @include shift(5);
+  @include span-columns(5);
+}

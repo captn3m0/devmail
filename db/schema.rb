@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161021225902) do
+ActiveRecord::Schema.define(version: 20161022072237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,8 +47,9 @@ ActiveRecord::Schema.define(version: 20161021225902) do
     t.bigint   "userid"
     t.string   "nick"
     t.string   "token"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "stars_count", default: 0
     t.index ["email"], name: "index_users_on_email", using: :btree
     t.index ["userid"], name: "index_users_on_userid", unique: true, using: :btree
   end
