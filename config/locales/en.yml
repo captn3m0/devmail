@@ -28,3 +28,4 @@ en:
     already_logged_in: 'You are already logged in.'
     logged_in: 'You have been logged in successfully'
     authentication_error: 'There was an error at the remote authentication service!.'
+    provider_already_connected: 'Logged in successfully'

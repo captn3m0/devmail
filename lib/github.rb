@@ -14,5 +14,9 @@ class Github
     end
     @client.starred(@user.nick, :accept => 'application/vnd.github.v3.star+json', :per_page => @config['star_fetch_count'])
   end
+
+  def setup_webhook (*args)
+    @client.create_hook *args
+  end
 end
 
