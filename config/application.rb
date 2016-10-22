@@ -3,6 +3,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 module Devmail
   class Application < Rails::Application
+    config.github = Hash.new
     config.assets.quiet = true
     config.generators do |generate|
       generate.helper false
@@ -14,6 +15,6 @@ module Devmail
       generate.view_specs false
     end
     config.action_controller.action_on_unpermitted_parameters = :raise
-    config.active_job.queue_adapter = :delayed_job
+    config.active_job.queue_adapter = :resque
   end
 end

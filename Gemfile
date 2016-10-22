@@ -28,8 +28,8 @@ gem 'octokit'
 group :development do
   gem "listen"
   gem "spring"
-  gem "spring-commands-rspec"
   gem "web-console"
+  gem 'resque'
 end
 
 group :development, :test do
@@ -40,7 +40,6 @@ group :development, :test do
   gem "factory_girl_rails"
   gem "pry-byebug"
   gem "pry-rails"
-  gem "rspec-rails", "~> 3.5.0.beta4"
 end
 
 group :development, :staging do

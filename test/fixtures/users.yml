@@ -1,0 +1,9 @@
+default:
+  id: 1
+  nick: captn3m0
+# This is incorrect so as not to be created
+# before the omnihash test runs
+  userid: 584251
+  email: me@captnemo.in
+  token: invalid_token
+  name: Nemo

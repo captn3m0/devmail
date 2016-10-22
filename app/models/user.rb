@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
 
   validates_uniqueness_of :userid
 
+  has_many :stars
+
   def self.create_from_omnihash(omnihash)
     user = create name: omnihash[:info][:name],
                   email: omnihash[:info][:email],

@@ -1,5 +1,6 @@
 require 'test_helper'
 require 'yaml'
+require 'pp'
 
 class UserTest < ActiveSupport::TestCase
   def setup
